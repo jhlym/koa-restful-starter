@@ -1,9 +1,11 @@
 import 'reflect-metadata';
-import { createKoaServer } from 'routing-controllers';
-import * as Controller from './controller';
+import { createKoaServer, useContainer } from 'routing-controllers';
+import { Container } from 'typedi';
+
+useContainer(Container);
 
 const app = createKoaServer({
-  controllers: [Controller.InsuranceController],
+  controllers: [__dirname + '/controllers/*.ts'],
 });
 
 app.listen(3000, function () {
