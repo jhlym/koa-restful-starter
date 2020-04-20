@@ -7,11 +7,18 @@ import routes from '../constant/Routes';
 export class CompanyRepository {
   companys: Company[] = [];
 
-  async getCompanyList() {
+  constructor() {
+    this.setCompanyList();
+  }
+
+  async setCompanyList() {
     if (this.companys.length === 0) {
       const { list }: GetCompanyResponse = await CashdocAPI.get(routes.companys.pathname);
       this.companys = list;
     }
+  }
+
+  getCompanyList() {
     return this.companys;
   }
 }
