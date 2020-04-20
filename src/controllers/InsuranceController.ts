@@ -16,6 +16,7 @@ export class InsuranceController {
     const {
       action: { params },
     } = body;
+    console.dir(params);
     const { list }: GetCompanyResponse = await CashdocAPI.get(routes.companys.pathname);
     const searchResultCompanys = list.filter((company) =>
       // TODO: 검색 필터링 조건 자세히 할 것

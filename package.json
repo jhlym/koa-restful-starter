@@ -5,21 +5,25 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist/",
-    "start": "nodemon --watch src --delay 1 --exec 'ts-node' src/app.ts"
+    "start": "nodemon --watch src --delay 1 --exec 'ts-node' src/index.ts"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.11.1",
+    "config": "^3.3.1",
+    "global": "^4.4.0",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
     "koa-multer": "^1.0.2",
     "koa-router": "^8.0.8",
     "lodash": "^4.17.15",
+    "path": "^0.12.7",
     "reflect-metadata": "^0.1.13",
     "request": "^2.88.2",
     "routing-controllers": "^0.8.1-alpha.2",
-    "typedi": "^0.8.0"
+    "typedi": "^0.8.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/koa": "^2.11.3",

@@ -27,10 +27,11 @@ SkillResponse.prototype.setQuickReplies = function (quickReplies) {
 };
 
 SkillResponse.prototype.getResult = function () {
-  return {
+  const result = {
     version: this.version,
     template: this.template,
   };
+  return result;
 };
 
 export default SkillResponse;
