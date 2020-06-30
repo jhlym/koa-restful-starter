@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  # koa:
+  #   build: ./
+  #   container_name: restful_api
+  #   working_dir: '/src/app'
+  #   ports:
+  #     - '3000:3000'
+  #   command: npm start
+
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    volumes:
+      - ./db:/var/lib/postgresql/data/
